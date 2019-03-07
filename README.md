@@ -1,2 +1,0 @@
-# Exercises
-All assignments
