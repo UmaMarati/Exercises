@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="form.css">
+    <script src="form.js"></script>
+</head>
+<body style="text-align:center;">
+    
+    <span id="myBtn" onmouseover="hover()">Welcome!!</span>
+    <div id="myModal" class="modal">
+    
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Welcome To MyWebPage!!!</p>
+      </div>
+    
+    </div>
+    <div class="container">
+            
+        <b>First Name:</b>&nbsp;
+            <input type="text" placeholder="Enter Firstname" id="fname" onkeypress="return isCharacterKey(event);"><br><span id='fnameMsg' style="display:none;color:red"></span><br>
+           
+        <b>Last Name:</b>&nbsp;
+            <input type="text" placeholder="Enter Lastname" id="lname" onkeypress="return isCharacterKey(event);"><br><span id='lnameMsg' style="display:none;color:red"></span><br>
+            <div id="emailerror" style="display: none;color: red"></div> 
+        <b>Email:</b>&nbsp;
+            <input id="email" type="email" placeholder="Enter Email"><br><span id='emailMsg' style="display:none;color:red"></span><br>
+            <div id="usererror" style="display:none;color:red"></div>
+        <b>User Id:</b>&nbsp;
+            <input type="text" placeholder="Enter User Id" id="userid" ><br><span id='useridMsg' style="display:none;color:red"></span><br>
+            <div id="pswerror" style="display: none;color: red"></div>
+        <b>Password:</b>&nbsp;
+            <input type="password" placeholder="Enter Password" id="psw" onkeyup="check();"><br><span id='pswMsg' style="display:none;color:red"></span><br>
+            
+        <b>Confirm Password:</b>&nbsp;
+            <input type="password" placeholder="Confirm Password" id="cpsw" onkeyup="check();"><span id='message'></span><br><span id='cpswMsg' style="display:none;color:red"></span><br>
+            <br>
+            <button type="submit" onclick="validateForm();" class="btn btn-primary" id='submitBtn'>Submit</button>
+            
+    </div>
+
+</body>
+</html>
